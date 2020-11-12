@@ -11,12 +11,12 @@ import java.awt.Color;
  *
  * @author user
  */
-public class WyborPoziomu extends javax.swing.JFrame {
+public class PoziomTrudny extends javax.swing.JFrame {
 
     /**
-     * Creates new form WyborPoziomu
+     * Creates new form PoziomLatwy
      */
-    public WyborPoziomu() {
+    public PoziomTrudny() {
         initComponents();
     }
 
@@ -31,75 +31,68 @@ public class WyborPoziomu extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setPreferredSize(new java.awt.Dimension(623, 402));
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\GitHub\\Zawansowane-Programowanie-w-Javie\\SudokuProjekt\\Sudoku.png")); // NOI18N
-        jLabel1.setAutoscrolls(true);
+        jLabel1.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
+        jLabel1.setText("Poziom   Trudny");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(410, 30, 200, 200);
+        jLabel1.setBounds(180, 140, 240, 29);
 
-        jLabel2.setFont(new java.awt.Font("Felix Titling", 1, 33)); // NOI18N
-        jLabel2.setText("Systemowe Sudoku");
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\GitHub\\Zawansowane-Programowanie-w-Javie\\SudokuProjekt\\Projekt_bez_tytułu__2_-removebg-preview.png")); // NOI18N
+        jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 20, 460, 50);
+        jLabel2.setBounds(40, 20, 470, 140);
 
-        jLabel3.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
-        jLabel3.setText("Wybierz poziom");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 100, 200, 40);
-
-        jButton1.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton1.setText("Łatwy");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jButton1.setText("System binarny");
         getContentPane().add(jButton1);
-        jButton1.setBounds(100, 170, 110, 23);
+        jButton1.setBounds(120, 200, 140, 23);
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton2.setText("Średni");
+        jButton2.setText("System Heksadycemalny");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(100, 220, 110, 23);
+        jButton2.setBounds(190, 260, 180, 23);
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 2, 12)); // NOI18N
-        jButton3.setText("Trudny");
+        jButton3.setText("System Dziesiętny");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 270, 110, 23);
+        jButton3.setBounds(320, 200, 140, 23);
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("Wyloguj się");
+        jMenuItem1.setText("Wybór Poziomu");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
             }
         });
         jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Wyloguj się");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
 
@@ -111,33 +104,27 @@ public class WyborPoziomu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       PoziomLatwy frame=new PoziomLatwy();
-       frame.setVisible(true);
-       frame.getContentPane().setBackground(new Color(219, 215, 217));
-       this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       OknoLogowania frame2=new OknoLogowania();
+       WyborPoziomu frame2=new WyborPoziomu();
        frame2.setVisible(true);
        frame2.getContentPane().setBackground(new Color(219, 215, 217));
        this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       PoziomSredni frame2=new PoziomSredni();
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+       OknoLogowania frame2=new OknoLogowania();
        frame2.setVisible(true);
        frame2.getContentPane().setBackground(new Color(219, 215, 217));
        this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       PoziomTrudny frame2=new PoziomTrudny();
-       frame2.setVisible(true);
-       frame2.getContentPane().setBackground(new Color(219, 215, 217));
-       this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,20 +143,21 @@ public class WyborPoziomu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WyborPoziomu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PoziomTrudny.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WyborPoziomu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PoziomTrudny.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WyborPoziomu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PoziomTrudny.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WyborPoziomu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PoziomTrudny.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WyborPoziomu().setVisible(true);
+                new PoziomTrudny().setVisible(true);
             }
         });
     }
@@ -180,10 +168,10 @@ public class WyborPoziomu extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
 }
