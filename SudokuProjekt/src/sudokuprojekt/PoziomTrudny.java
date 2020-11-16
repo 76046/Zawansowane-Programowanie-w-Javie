@@ -49,6 +49,7 @@ public class PoziomTrudny extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(180, 140, 240, 32);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/TrudnyPoziom.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(40, 20, 470, 140);
