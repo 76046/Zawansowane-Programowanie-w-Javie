@@ -19,7 +19,7 @@ public class SudokuProjekt {
     public static void main(String[] args) {
         OknoLogowania frame=new OknoLogowania();
         frame.setVisible(true);
-        frame.getContentPane().setBackground(new Color(219, 215, 217));
+        frame.getContentPane().setBackground(new Color(2, 215, 217));
         
         
     }

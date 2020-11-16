@@ -47,9 +47,9 @@ public class PoziomLatwy extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel1.setText("Poziom   Łatwy");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(180, 140, 240, 29);
+        jLabel1.setBounds(180, 140, 240, 32);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\GitHub\\Zawansowane-Programowanie-w-Javie\\SudokuProjekt\\Projekt_bez_tytułu-removebg-preview.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\MarKo\\Desktop\\semestr1\\Zawansowane-Programowanie-w-Javie\\SudokuProjekt\\Projekt_bez_tytułu-removebg-preview.png")); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(40, 20, 470, 140);

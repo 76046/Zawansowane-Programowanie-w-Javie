@@ -64,7 +64,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\user\Documents\GitHub\Zawansowane-Programowanie-w-Javie\SudokuProjekt\Sudoku.png"/>
+          <Image iconType="2" name="C:\Users\MarKo\Desktop\semestr1\Zawansowane-Programowanie-w-Javie\SudokuProjekt\Sudoku.png"/>
         </Property>
         <Property name="autoscrolls" type="boolean" value="true"/>
       </Properties>

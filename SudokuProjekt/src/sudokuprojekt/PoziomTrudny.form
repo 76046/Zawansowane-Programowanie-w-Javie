@@ -78,9 +78,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\user\Documents\GitHub\Zawansowane-Programowanie-w-Javie\SudokuProjekt\Projekt_bez_tytu&#x142;u__2_-removebg-preview.png"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
       <Constraints>

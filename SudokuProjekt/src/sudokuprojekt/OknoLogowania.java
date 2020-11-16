@@ -60,6 +60,7 @@ public class OknoLogowania extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -227,7 +228,7 @@ public class OknoLogowania extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel3.setText("Panel Logowania");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 50, 185, 22);
+        jLabel3.setBounds(80, 50, 149, 24);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);

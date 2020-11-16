@@ -46,7 +46,7 @@ public class WyborPoziomu extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(623, 402));
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\GitHub\\Zawansowane-Programowanie-w-Javie\\SudokuProjekt\\Sudoku.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\MarKo\\Desktop\\semestr1\\Zawansowane-Programowanie-w-Javie\\SudokuProjekt\\Sudoku.png")); // NOI18N
         jLabel1.setAutoscrolls(true);
         getContentPane().add(jLabel1);
         jLabel1.setBounds(410, 30, 200, 200);
