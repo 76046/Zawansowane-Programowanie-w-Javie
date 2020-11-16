@@ -65,7 +65,7 @@ public class WyborPoziomu extends javax.swing.JFrame {
         jButton1.setText("Łatwy");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton1ActionPerformed_Latwy(evt);
             }
         });
         getContentPane().add(jButton1);
@@ -111,12 +111,12 @@ public class WyborPoziomu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed_Latwy(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed_Latwy
        PoziomLatwy frame=new PoziomLatwy();
        frame.setVisible(true);
        frame.getContentPane().setBackground(new Color(219, 215, 217));
        this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed_Latwy
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
        OknoLogowania frame2=new OknoLogowania();

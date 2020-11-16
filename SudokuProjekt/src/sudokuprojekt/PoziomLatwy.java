@@ -55,13 +55,18 @@ public class PoziomLatwy extends javax.swing.JFrame {
         jLabel2.setBounds(40, 20, 470, 140);
 
         jButton1.setText("System binarny");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed_Binarny(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(120, 200, 140, 23);
 
         jButton2.setText("System Heksadycemalny");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton2ActionPerformed_Heksadecymalny(evt);
             }
         });
         getContentPane().add(jButton2);
@@ -70,7 +75,7 @@ public class PoziomLatwy extends javax.swing.JFrame {
         jButton3.setText("System Dziesiętny");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton3ActionPerformed_Dziesietny(evt);
             }
         });
         getContentPane().add(jButton3);
@@ -104,13 +109,13 @@ public class PoziomLatwy extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed_Dziesietny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed_Dziesietny
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed_Dziesietny
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed_Heksadecymalny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed_Heksadecymalny
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed_Heksadecymalny
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
        WyborPoziomu frame2=new WyborPoziomu();
@@ -125,6 +130,10 @@ public class PoziomLatwy extends javax.swing.JFrame {
        frame2.getContentPane().setBackground(new Color(219, 215, 217));
        this.setVisible(false);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jButton1ActionPerformed_Binarny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed_Binarny
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed_Binarny
 
     /**
      * @param args the command line arguments
