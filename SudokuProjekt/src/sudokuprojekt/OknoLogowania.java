@@ -246,7 +246,8 @@ public class OknoLogowania extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       WyborPoziomu frame2=new WyborPoziomu();
+       //zalogowany
+        WyborPoziomu frame2=new WyborPoziomu();
        frame2.setVisible(true);
        frame2.getContentPane().setBackground(new Color(219, 215, 217));
        this.setVisible(false);
