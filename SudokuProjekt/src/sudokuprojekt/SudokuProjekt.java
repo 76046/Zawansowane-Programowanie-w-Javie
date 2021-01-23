@@ -21,7 +21,7 @@ public class SudokuProjekt {
         frame.setVisible(true);
         frame.getContentPane().setBackground(new Color(219, 215, 217));
         
-        
-    }
+       
+   }
     
 }

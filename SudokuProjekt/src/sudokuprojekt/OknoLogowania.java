@@ -99,7 +99,7 @@ public class OknoLogowania extends javax.swing.JFrame {
         jButton2.setText("Zarejestruj się");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed_ZarejestrujSię(evt);
+                jButton2ActionPerformed_ZarejestrujSie(evt);
             }
         });
         getContentPane().add(jButton2);
@@ -228,7 +228,7 @@ public class OknoLogowania extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel3.setText("Panel Logowania");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 50, 149, 24);
+        jLabel3.setBounds(80, 50, 185, 22);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -253,9 +253,9 @@ public class OknoLogowania extends javax.swing.JFrame {
        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed_ZalogujSie
 
-    private void jButton2ActionPerformed_ZarejestrujSię(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed_ZarejestrujSię
+    private void jButton2ActionPerformed_ZarejestrujSie(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed_ZarejestrujSie
         jTabbedPane1.setSelectedIndex(1);
-    }//GEN-LAST:event_jButton2ActionPerformed_ZarejestrujSię
+    }//GEN-LAST:event_jButton2ActionPerformed_ZarejestrujSie
 
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
         // TODO add your handling code here:
