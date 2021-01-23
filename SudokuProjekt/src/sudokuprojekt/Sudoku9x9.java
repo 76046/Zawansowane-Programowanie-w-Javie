@@ -5,6 +5,7 @@
  */
 package sudokuprojekt;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JTextField;
 
@@ -121,6 +122,11 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell66 = new javax.swing.JTextField();
         cell64 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
@@ -1269,6 +1275,31 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(640, 30, 120, 23);
 
+        jMenu1.setText("File");
+
+        jMenuItem1.setText("Wybór Poziomu");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Wyloguj się");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1597,20 +1628,56 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     }//GEN-LAST:event_cell64ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        if(SudokuProjekt.sredni==true){
+       sudokuGenerator(9,30);
+        }
+        if(SudokuProjekt.trudny==true){
+        sudokuGenerator(9,45);
+        }
+        if(SudokuProjekt.latwy==true){
+        sudokuGenerator(9,20);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        SudokuProjekt.latwy=false;
+        SudokuProjekt.sredni=false;
+        SudokuProjekt.trudny=false;
+        WyborPoziomu frame2=new WyborPoziomu();
+        frame2.setVisible(true);
+        frame2.getContentPane().setBackground(new Color(219, 215, 217));
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        SudokuProjekt.latwy=false;
+        SudokuProjekt.sredni=false;
+        SudokuProjekt.trudny=false;
+        OknoLogowania frame2=new OknoLogowania();
+        frame2.setVisible(true);
+        frame2.getContentPane().setBackground(new Color(219, 215, 217));
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void sudokuGenerator(int N, int K){
         ArrayList<JTextField> al = new ArrayList<JTextField>();
         ArrayList<Integer> almatrix = new ArrayList<Integer>();
         al=addToArrayList();
-        int N = 9, K = 20;
+        //czyszczenie sudoku w razie gdyby ktoś chciał wygenerować jeszcze raz
+        for(int i=0; i<al.size(); i++){
+        al.get(i).setText("");
+        }
         int matrix[][];
         SudokuSolver sudoku = new SudokuSolver(N, K); 
         sudoku.fillValues(); 
         matrix=sudoku.returnSudoku();
-        /*for (int i = 0; i<N; i++) 
+        for (int i = 0; i<N; i++) 
         { 
             for (int j = 0; j<N; j++) 
                 System.out.print(matrix[i][j] + " "); 
             System.out.println(); 
-        } */
+        } 
         System.out.println(); 
         for (int i = 0; i<N; i++) 
         { 
@@ -1618,10 +1685,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
                 almatrix.add(matrix[i][j]);
          } 
         for (int i=0; i<almatrix.size(); i++){
-                al.get(i).setText(Integer.toString(almatrix.get(i)));
+            if(almatrix.get(i)!=0){
+                al.get(i).setText(Integer.toString(almatrix.get(i)));}
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
     private ArrayList<JTextField> addToArrayList(){
     ArrayList<JTextField> al = new ArrayList<JTextField>();
     al.add(cell1);
@@ -1827,6 +1894,11 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private javax.swing.JTextField cell81;
     private javax.swing.JTextField cell9;
     private javax.swing.JButton jButton1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

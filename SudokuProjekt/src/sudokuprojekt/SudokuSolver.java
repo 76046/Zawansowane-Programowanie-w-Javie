@@ -168,7 +168,7 @@ public class SudokuSolver {
         int count = K; 
         while (count != 0) 
         { 
-            int cellId = randomGenerator(N*N); 
+            int cellId = randomGenerator(N*N)-1; 
   
             // System.out.println(cellId); 
             // extract coordinates i  and j 

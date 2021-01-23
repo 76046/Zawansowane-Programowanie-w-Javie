@@ -110,6 +110,7 @@ public class PoziomSredni extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed_Dziesietny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed_Dziesietny
+        SudokuProjekt.sredni=true;
         Sudoku9x9 frame2=new Sudoku9x9();
        frame2.setVisible(true);
        frame2.getContentPane().setBackground(new Color(219, 215, 217));
@@ -135,6 +136,7 @@ public class PoziomSredni extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jButton1ActionPerformed_Binarny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed_Binarny
+        SudokuProjekt.sredni=true;
         Sudoku9x9 frame2=new Sudoku9x9();
        frame2.setVisible(true);
        frame2.getContentPane().setBackground(new Color(219, 215, 217));
