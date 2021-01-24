@@ -1667,7 +1667,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         //czyszczenie sudoku w razie gdyby ktoś chciał wygenerować jeszcze raz
         for(int i=0; i<al.size(); i++){
         al.get(i).setText("");
+        al.get(i).setEditable(true);
+        al.get(i).setForeground(Color.BLACK);
         }
+        
         int matrix[][];
         SudokuSolver sudoku = new SudokuSolver(N, K); 
         sudoku.fillValues(); 
@@ -1686,7 +1689,10 @@ public class Sudoku9x9 extends javax.swing.JFrame {
          } 
         for (int i=0; i<almatrix.size(); i++){
             if(almatrix.get(i)!=0){
-                al.get(i).setText(Integer.toString(almatrix.get(i)));}
+                al.get(i).setText(Integer.toString(almatrix.get(i)));
+                al.get(i).setForeground(new Color(36, 168, 102));
+                al.get(i).setEditable(false);
+                        }
         }
     }
     private ArrayList<JTextField> addToArrayList(){

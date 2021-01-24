@@ -21,7 +21,10 @@ public class SudokuProjekt {
      */
     public static void main(String[] args) {
         
-        
+        //int N = 9, K = 20; 
+        //SudokuSolver sudoku = new SudokuSolver(N, K); 
+        //sudoku.fillValues(); 
+        //sudoku.printSudoku();
         OknoLogowania frame=new OknoLogowania();
         frame.setVisible(true);
         frame.getContentPane().setBackground(new Color(219, 215, 217));

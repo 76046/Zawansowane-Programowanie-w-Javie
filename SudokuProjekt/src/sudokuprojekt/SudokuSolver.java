@@ -173,7 +173,7 @@ public class SudokuSolver {
             // System.out.println(cellId); 
             // extract coordinates i  and j 
             int i = (cellId/N); 
-            int j = cellId%9; 
+            int j = cellId%N; 
             if (j != 0) 
                 j = j - 1; 
   
