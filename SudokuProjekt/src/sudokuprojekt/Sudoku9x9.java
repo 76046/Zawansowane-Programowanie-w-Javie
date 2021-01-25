@@ -129,7 +129,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(800, 650));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -143,11 +143,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell1.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell1);
         cell1.setBounds(0, 0, 60, 60);
 
@@ -156,11 +151,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell2.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell2ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell2);
         cell2.setBounds(60, 0, 60, 60);
 
@@ -169,11 +159,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell3.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell3ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell3);
         cell3.setBounds(120, 0, 60, 60);
 
@@ -182,11 +167,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell19.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell19ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell19);
         cell19.setBounds(0, 120, 60, 60);
 
@@ -195,11 +175,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell21.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell21ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell21);
         cell21.setBounds(120, 120, 60, 60);
 
@@ -208,11 +183,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell11.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell11ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell11);
         cell11.setBounds(60, 60, 60, 60);
 
@@ -221,11 +191,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell20.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell20ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell20);
         cell20.setBounds(60, 120, 60, 60);
 
@@ -234,11 +199,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell12.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell12ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell12);
         cell12.setBounds(120, 60, 60, 60);
 
@@ -247,11 +207,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell10.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell10ActionPerformed(evt);
-            }
-        });
         jPanel1.add(cell10);
         cell10.setBounds(0, 60, 60, 60);
 
@@ -269,11 +224,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell6.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell6ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell6);
         cell6.setBounds(120, 0, 60, 60);
 
@@ -282,11 +232,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell22.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell22ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell22);
         cell22.setBounds(0, 120, 60, 60);
 
@@ -295,11 +240,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell5.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell5ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell5);
         cell5.setBounds(60, 0, 60, 60);
 
@@ -308,11 +248,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell4.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell4ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell4);
         cell4.setBounds(0, 0, 60, 60);
 
@@ -321,11 +256,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell24.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell24ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell24);
         cell24.setBounds(120, 120, 60, 60);
 
@@ -334,11 +264,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell14.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell14ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell14);
         cell14.setBounds(60, 60, 60, 60);
 
@@ -347,11 +272,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell23.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell23ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell23);
         cell23.setBounds(60, 120, 60, 60);
 
@@ -360,11 +280,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell15.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell15ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell15);
         cell15.setBounds(120, 60, 60, 60);
 
@@ -373,11 +288,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell13.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell13ActionPerformed(evt);
-            }
-        });
         jPanel2.add(cell13);
         cell13.setBounds(0, 60, 60, 60);
 
@@ -395,11 +305,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell9.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell9ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell9);
         cell9.setBounds(120, 0, 60, 60);
 
@@ -408,11 +313,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell25.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell25ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell25);
         cell25.setBounds(0, 120, 60, 60);
 
@@ -421,11 +321,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell8.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell8ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell8);
         cell8.setBounds(60, 0, 60, 60);
 
@@ -434,11 +329,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell7.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell7ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell7);
         cell7.setBounds(0, 0, 60, 60);
 
@@ -447,11 +337,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell27.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell27ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell27);
         cell27.setBounds(120, 120, 60, 60);
 
@@ -460,11 +345,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell17.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell17ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell17);
         cell17.setBounds(60, 60, 60, 60);
 
@@ -473,11 +353,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell26.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell26ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell26);
         cell26.setBounds(60, 120, 60, 60);
 
@@ -486,11 +361,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell18.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell18ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell18);
         cell18.setBounds(120, 60, 60, 60);
 
@@ -499,11 +369,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell16.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell16ActionPerformed(evt);
-            }
-        });
         jPanel3.add(cell16);
         cell16.setBounds(0, 60, 60, 60);
 
@@ -521,11 +386,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell33.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell33ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell33);
         cell33.setBounds(120, 0, 60, 60);
 
@@ -534,11 +394,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell49.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell49.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell49.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell49ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell49);
         cell49.setBounds(0, 120, 60, 60);
 
@@ -547,11 +402,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell32.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell32ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell32);
         cell32.setBounds(60, 0, 60, 60);
 
@@ -560,11 +410,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell31.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell31.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell31ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell31);
         cell31.setBounds(0, 0, 60, 60);
 
@@ -573,11 +418,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell51.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell51.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell51ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell51);
         cell51.setBounds(120, 120, 60, 60);
 
@@ -586,11 +426,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell41.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell41.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell41ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell41);
         cell41.setBounds(60, 60, 60, 60);
 
@@ -599,11 +434,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell50.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell50ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell50);
         cell50.setBounds(60, 120, 60, 60);
 
@@ -612,11 +442,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell42.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell42.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell42ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell42);
         cell42.setBounds(120, 60, 60, 60);
 
@@ -625,11 +450,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell40.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell40.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell40ActionPerformed(evt);
-            }
-        });
         jPanel5.add(cell40);
         cell40.setBounds(0, 60, 60, 60);
 
@@ -647,11 +467,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell30.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell30.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell30ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell30);
         cell30.setBounds(120, 0, 60, 60);
 
@@ -660,11 +475,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell46.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell46ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell46);
         cell46.setBounds(0, 120, 60, 60);
 
@@ -673,11 +483,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell29.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell29.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell29.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell29ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell29);
         cell29.setBounds(60, 0, 60, 60);
 
@@ -686,11 +491,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell28.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell28ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell28);
         cell28.setBounds(0, 0, 60, 60);
 
@@ -699,11 +499,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell48.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell48ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell48);
         cell48.setBounds(120, 120, 60, 60);
 
@@ -712,11 +507,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell38.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell38ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell38);
         cell38.setBounds(60, 60, 60, 60);
 
@@ -725,11 +515,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell47.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell47.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell47ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell47);
         cell47.setBounds(60, 120, 60, 60);
 
@@ -738,11 +523,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell39.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell39.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell39.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell39ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell39);
         cell39.setBounds(120, 60, 60, 60);
 
@@ -751,11 +531,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell37.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell37ActionPerformed(evt);
-            }
-        });
         jPanel4.add(cell37);
         cell37.setBounds(0, 60, 60, 60);
 
@@ -773,11 +548,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell36.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell36.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell36ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell36);
         cell36.setBounds(120, 0, 60, 60);
 
@@ -786,11 +556,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell52.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell52ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell52);
         cell52.setBounds(0, 120, 60, 60);
 
@@ -799,11 +564,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell35.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell35.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell35ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell35);
         cell35.setBounds(60, 0, 60, 60);
 
@@ -812,11 +572,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell34.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell34.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell34ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell34);
         cell34.setBounds(0, 0, 60, 60);
 
@@ -825,11 +580,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell54.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell54ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell54);
         cell54.setBounds(120, 120, 60, 60);
 
@@ -838,11 +588,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell44.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell44ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell44);
         cell44.setBounds(60, 60, 60, 60);
 
@@ -851,11 +596,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell53.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell53ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell53);
         cell53.setBounds(60, 120, 60, 60);
 
@@ -864,11 +604,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell45.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell45ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell45);
         cell45.setBounds(120, 60, 60, 60);
 
@@ -877,11 +612,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell43.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell43ActionPerformed(evt);
-            }
-        });
         jPanel6.add(cell43);
         cell43.setBounds(0, 60, 60, 60);
 
@@ -899,11 +629,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell63.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell63.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell63ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell63);
         cell63.setBounds(120, 0, 60, 60);
 
@@ -912,11 +637,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell79.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell79.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell79.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell79.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell79ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell79);
         cell79.setBounds(0, 120, 60, 60);
 
@@ -925,11 +645,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell62.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell62ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell62);
         cell62.setBounds(60, 0, 60, 60);
 
@@ -938,11 +653,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell61.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell61ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell61);
         cell61.setBounds(0, 0, 60, 60);
 
@@ -951,11 +661,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell81.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell81.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell81ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell81);
         cell81.setBounds(120, 120, 60, 60);
 
@@ -964,11 +669,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell71.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell71.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell71ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell71);
         cell71.setBounds(60, 60, 60, 60);
 
@@ -977,11 +677,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell80.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell80.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell80ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell80);
         cell80.setBounds(60, 120, 60, 60);
 
@@ -990,11 +685,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell72.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell72.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell72ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell72);
         cell72.setBounds(120, 60, 60, 60);
 
@@ -1003,11 +693,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell70.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell70.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell70ActionPerformed(evt);
-            }
-        });
         jPanel9.add(cell70);
         cell70.setBounds(0, 60, 60, 60);
 
@@ -1025,11 +710,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell60.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell60.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell60ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell60);
         cell60.setBounds(120, 0, 60, 60);
 
@@ -1038,11 +718,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell76.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell76.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell76.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell76ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell76);
         cell76.setBounds(0, 120, 60, 60);
 
@@ -1051,11 +726,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell59.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell59.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell59.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell59ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell59);
         cell59.setBounds(60, 0, 60, 60);
 
@@ -1064,11 +734,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell58.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell58.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell58ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell58);
         cell58.setBounds(0, 0, 60, 60);
 
@@ -1077,11 +742,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell78.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell78.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell78.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell78ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell78);
         cell78.setBounds(120, 120, 60, 60);
 
@@ -1090,11 +750,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell68.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell68.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell68ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell68);
         cell68.setBounds(60, 60, 60, 60);
 
@@ -1103,11 +758,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell77.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell77.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell77.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell77ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell77);
         cell77.setBounds(60, 120, 60, 60);
 
@@ -1116,11 +766,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell69.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell69.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell69.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell69ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell69);
         cell69.setBounds(120, 60, 60, 60);
 
@@ -1129,11 +774,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell67.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell67.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell67ActionPerformed(evt);
-            }
-        });
         jPanel8.add(cell67);
         cell67.setBounds(0, 60, 60, 60);
 
@@ -1151,11 +791,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell57.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell57ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell57);
         cell57.setBounds(120, 0, 60, 60);
 
@@ -1164,11 +799,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell73.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell73.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell73ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell73);
         cell73.setBounds(0, 120, 60, 60);
 
@@ -1177,11 +807,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell56.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell56.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell56ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell56);
         cell56.setBounds(60, 0, 60, 60);
 
@@ -1190,11 +815,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell55.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell55.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell55ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell55);
         cell55.setBounds(0, 0, 60, 60);
 
@@ -1203,11 +823,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell75.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell75.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell75ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell75);
         cell75.setBounds(120, 120, 60, 60);
 
@@ -1216,11 +831,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell65.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell65.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell65ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell65);
         cell65.setBounds(60, 60, 60, 60);
 
@@ -1229,11 +839,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell74.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell74.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell74ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell74);
         cell74.setBounds(60, 120, 60, 60);
 
@@ -1242,11 +847,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell66.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell66.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell66ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell66);
         cell66.setBounds(120, 60, 60, 60);
 
@@ -1255,11 +855,6 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         cell64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cell64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cell64.setPreferredSize(new java.awt.Dimension(60, 60));
-        cell64.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cell64ActionPerformed(evt);
-            }
-        });
         jPanel7.add(cell64);
         cell64.setBounds(0, 60, 60, 60);
 
@@ -1303,340 +898,24 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cell1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell1ActionPerformed
-
-    private void cell2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell2ActionPerformed
-
-    private void cell3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell3ActionPerformed
-
-    private void cell19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell19ActionPerformed
-
-    private void cell21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell21ActionPerformed
-
-    private void cell11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell11ActionPerformed
-
-    private void cell20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell20ActionPerformed
-
-    private void cell12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell12ActionPerformed
-
-    private void cell10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell10ActionPerformed
-
-    private void cell6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell6ActionPerformed
-
-    private void cell22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell22ActionPerformed
-
-    private void cell5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell5ActionPerformed
-
-    private void cell4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell4ActionPerformed
-
-    private void cell24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell24ActionPerformed
-
-    private void cell14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell14ActionPerformed
-
-    private void cell23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell23ActionPerformed
-
-    private void cell15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell15ActionPerformed
-
-    private void cell13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell13ActionPerformed
-
-    private void cell9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell9ActionPerformed
-
-    private void cell25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell25ActionPerformed
-
-    private void cell8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell8ActionPerformed
-
-    private void cell7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell7ActionPerformed
-
-    private void cell27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell27ActionPerformed
-
-    private void cell17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell17ActionPerformed
-
-    private void cell26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell26ActionPerformed
-
-    private void cell18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell18ActionPerformed
-
-    private void cell16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell16ActionPerformed
-
-    private void cell33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell33ActionPerformed
-
-    private void cell49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell49ActionPerformed
-
-    private void cell32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell32ActionPerformed
-
-    private void cell31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell31ActionPerformed
-
-    private void cell51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell51ActionPerformed
-
-    private void cell41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell41ActionPerformed
-
-    private void cell50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell50ActionPerformed
-
-    private void cell42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell42ActionPerformed
-
-    private void cell40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell40ActionPerformed
-
-    private void cell30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell30ActionPerformed
-
-    private void cell46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell46ActionPerformed
-
-    private void cell29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell29ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell29ActionPerformed
-
-    private void cell28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell28ActionPerformed
-
-    private void cell48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell48ActionPerformed
-
-    private void cell38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell38ActionPerformed
-
-    private void cell47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell47ActionPerformed
-
-    private void cell39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell39ActionPerformed
-
-    private void cell37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell37ActionPerformed
-
-    private void cell36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell36ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell36ActionPerformed
-
-    private void cell52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell52ActionPerformed
-
-    private void cell35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell35ActionPerformed
-
-    private void cell34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell34ActionPerformed
-
-    private void cell54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell54ActionPerformed
-
-    private void cell44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell44ActionPerformed
-
-    private void cell53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell53ActionPerformed
-
-    private void cell45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell45ActionPerformed
-
-    private void cell43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell43ActionPerformed
-
-    private void cell63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell63ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell63ActionPerformed
-
-    private void cell79ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell79ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell79ActionPerformed
-
-    private void cell62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell62ActionPerformed
-
-    private void cell61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell61ActionPerformed
-
-    private void cell81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell81ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell81ActionPerformed
-
-    private void cell71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell71ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell71ActionPerformed
-
-    private void cell80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell80ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell80ActionPerformed
-
-    private void cell72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell72ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell72ActionPerformed
-
-    private void cell70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell70ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell70ActionPerformed
-
-    private void cell60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell60ActionPerformed
-
-    private void cell76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell76ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell76ActionPerformed
-
-    private void cell59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell59ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell59ActionPerformed
-
-    private void cell58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell58ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell58ActionPerformed
-
-    private void cell78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell78ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell78ActionPerformed
-
-    private void cell68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell68ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell68ActionPerformed
-
-    private void cell77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell77ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell77ActionPerformed
-
-    private void cell69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell69ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell69ActionPerformed
-
-    private void cell67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell67ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell67ActionPerformed
-
-    private void cell57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell57ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell57ActionPerformed
-
-    private void cell73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell73ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell73ActionPerformed
-
-    private void cell56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell56ActionPerformed
-
-    private void cell55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell55ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell55ActionPerformed
-
-    private void cell75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell75ActionPerformed
-
-    private void cell65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell65ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell65ActionPerformed
-
-    private void cell74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell74ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell74ActionPerformed
-
-    private void cell66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell66ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell66ActionPerformed
-
-    private void cell64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cell64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cell64ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        if(SudokuProjekt.latwy==true){
+        sudokuGenerator(9,20);
+        }
         if(SudokuProjekt.sredni==true){
        sudokuGenerator(9,30);
         }
         if(SudokuProjekt.trudny==true){
         sudokuGenerator(9,45);
         }
-        if(SudokuProjekt.latwy==true){
-        sudokuGenerator(9,20);
+         if(SudokuProjekt.latwybinarny==true){
+       sudokuBinarnyGenerator(9,20);
+        }
+        if(SudokuProjekt.srednibinarny==true){
+        sudokuBinarnyGenerator(9,30);
+        }
+        if(SudokuProjekt.trudnybinarny==true){
+        sudokuBinarnyGenerator(9,45);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1644,6 +923,9 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         SudokuProjekt.latwy=false;
         SudokuProjekt.sredni=false;
         SudokuProjekt.trudny=false;
+        SudokuProjekt.latwybinarny=false;
+        SudokuProjekt.srednibinarny=false;
+        SudokuProjekt.trudnybinarny=false;
         WyborPoziomu frame2=new WyborPoziomu();
         frame2.setVisible(true);
         frame2.getContentPane().setBackground(new Color(219, 215, 217));
@@ -1654,6 +936,9 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         SudokuProjekt.latwy=false;
         SudokuProjekt.sredni=false;
         SudokuProjekt.trudny=false;
+        SudokuProjekt.latwybinarny=false;
+        SudokuProjekt.srednibinarny=false;
+        SudokuProjekt.trudnybinarny=false;
         OknoLogowania frame2=new OknoLogowania();
         frame2.setVisible(true);
         frame2.getContentPane().setBackground(new Color(219, 215, 217));
@@ -1690,6 +975,61 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         for (int i=0; i<almatrix.size(); i++){
             if(almatrix.get(i)!=0){
                 al.get(i).setText(Integer.toString(almatrix.get(i)));
+                al.get(i).setForeground(new Color(36, 168, 102));
+                al.get(i).setEditable(false);
+                        }
+        }
+    }
+    private void sudokuBinarnyGenerator(int N, int K){
+    ArrayList<JTextField> al = new ArrayList<JTextField>();
+        ArrayList<Integer> almatrix = new ArrayList<Integer>();
+        al=addToArrayList();
+        //czyszczenie sudoku w razie gdyby ktoś chciał wygenerować jeszcze raz
+        for(int i=0; i<al.size(); i++){
+        al.get(i).setText("");
+        al.get(i).setEditable(true);
+        al.get(i).setForeground(Color.BLACK);
+        }
+        
+        int matrix[][];
+        SudokuSolver sudoku = new SudokuSolver(N, K); 
+        sudoku.fillValues(); 
+        matrix=sudoku.returnSudoku();
+        for (int i = 0; i<N; i++) 
+        { 
+            for (int j = 0; j<N; j++) 
+                System.out.print(matrix[i][j] + " "); 
+            System.out.println(); 
+        } 
+        System.out.println(); 
+        for (int i = 0; i<N; i++) 
+        { 
+            for (int j = 0; j<N; j++) 
+                almatrix.add(matrix[i][j]);
+         } 
+        for (int i=0; i<almatrix.size(); i++){
+            if(almatrix.get(i)!=0){
+                switch(almatrix.get(i)){
+                    case 1: al.get(i).setText(Integer.toString(1));
+                    break;
+                    case 2: al.get(i).setText(Integer.toString(10));
+                    break;
+                    case 3: al.get(i).setText(Integer.toString(11));
+                    break;
+                    case 4: al.get(i).setText(Integer.toString(100));
+                    break;
+                    case 5: al.get(i).setText(Integer.toString(101));
+                    break;
+                    case 6: al.get(i).setText(Integer.toString(110));
+                    break;
+                    case 7: al.get(i).setText(Integer.toString(111));
+                    break;
+                    case 8: al.get(i).setText(Integer.toString(1000));
+                    break;
+                    case 9: al.get(i).setText(Integer.toString(1001));
+                    break;
+                    
+                }
                 al.get(i).setForeground(new Color(36, 168, 102));
                 al.get(i).setEditable(false);
                         }

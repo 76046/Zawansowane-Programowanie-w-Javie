@@ -16,6 +16,9 @@ public class SudokuProjekt {
         public static boolean latwy=false;
         public static boolean sredni=false;
         public static boolean trudny=false;
+        public static boolean latwybinarny=false;
+        public static boolean srednibinarny=false;
+        public static boolean trudnybinarny=false;
     /**
      * @param args the command line arguments
      */

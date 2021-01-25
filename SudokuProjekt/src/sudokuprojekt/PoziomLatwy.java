@@ -118,7 +118,11 @@ public class PoziomLatwy extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed_Dziesietny
 
     private void jButton2ActionPerformed_Heksadecymalny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed_Heksadecymalny
-        // TODO add your handling code here:
+      SudokuProjekt.latwy=true;
+        sudoku16x16 frame2=new sudoku16x16();
+       frame2.setVisible(true);
+       frame2.getContentPane().setBackground(new Color(219, 215, 217));
+       this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed_Heksadecymalny
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -136,7 +140,7 @@ public class PoziomLatwy extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jButton1ActionPerformed_Binarny(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed_Binarny
-        SudokuProjekt.latwy=true;
+        SudokuProjekt.latwybinarny=true;
         Sudoku9x9 frame2=new Sudoku9x9();
        frame2.setVisible(true);
        frame2.getContentPane().setBackground(new Color(219, 215, 217));

@@ -11,17 +11,17 @@ import java.util.Random;
 public class SudokuSolver {
 
     int[] mat[]; 
-    int N; // number of columns/rows. 
-    int SRN; // square root of N 
-    int K; // No. Of missing digits 
+    int N; //ile wierszy 
+    int SRN; //pierwastek z N
+    int K; // ilosc pozycji do usuniecia
   
-    // Constructor 
+    // Konstruktor
     SudokuSolver(int N, int K) 
     { 
         this.N = N; 
         this.K = K; 
   
-        // Compute square root of N 
+        // Obliczenie pierwiastka z N
         Double SRNd = Math.sqrt(N); 
         SRN = SRNd.intValue();
   
@@ -31,27 +31,27 @@ public class SudokuSolver {
     // Sudoku Generator 
     public void fillValues() 
     { 
-        // Fill the diagonal of SRN x SRN matrices 
+        // Uzupełnienie przekątnych SRN x SRN macierzy
         fillDiagonal(); 
   
-        // Fill remaining blocks 
+        // Uzupełnienie pozostałych 
         fillRemaining(0, SRN); 
   
-        // Remove Randomly K digits to make game 
+        // Usunięcie w randomowych miejscach K pozycji
         removeKDigits(); 
     } 
   
-    // Fill the diagonal SRN number of SRN x SRN matrices 
+    // Wypełnij przekątną liczbę SRN macierzy SRN x SRN 
     void fillDiagonal() 
     { 
   
         for (int i = 0; i<N; i=i+SRN) 
   
-            // for diagonal box, start coordinates->i==j 
+            // dla przekątnego boxa, zacznij od i==j 
             fillBox(i, i); 
     } 
   
-    // Returns false if given 3 x 3 block contains num. 
+    // Zwraca false, jeśli dany blok 3 x 3 zawiera num
     boolean unUsedInBox(int rowStart, int colStart, int num) 
     { 
         for (int i = 0; i<SRN; i++) 
@@ -62,7 +62,7 @@ public class SudokuSolver {
         return true; 
     } 
   
-    // Fill a 3 x 3 matrix. 
+    // uzupełnia macierz 3x3 
     void fillBox(int row,int col) 
     { 
         int num; 
@@ -87,7 +87,7 @@ public class SudokuSolver {
         return (int) Math.floor((Math.random()*num+1)); 
     } 
   
-    // Check if safe to put in cell 
+    // sprawdza czy bezpieczne żeby wstawić w komórke
     boolean CheckIfSafe(int i,int j,int num) 
     { 
         return (unUsedInRow(i, num) && 
@@ -95,7 +95,7 @@ public class SudokuSolver {
                 unUsedInBox(i-i%SRN, j-j%SRN, num)); 
     } 
   
-    // check in the row for existence 
+    // sprawdź w rzędzie istnienie
     boolean unUsedInRow(int i,int num) 
     { 
         for (int j = 0; j<N; j++) 
@@ -104,7 +104,7 @@ public class SudokuSolver {
         return true; 
     } 
   
-    // check in the row for existence 
+    // sprawdź w kolumnie
     boolean unUsedInCol(int j,int num) 
     { 
         for (int i = 0; i<N; i++) 
@@ -113,8 +113,8 @@ public class SudokuSolver {
         return true; 
     } 
   
-    // A recursive function to fill remaining  
-    // matrix 
+    //Funkcja rekurencyjna do wypełnienia pozostałych
+    
     boolean fillRemaining(int i, int j) 
     { 
         //  System.out.println(i+" "+j); 
@@ -161,8 +161,7 @@ public class SudokuSolver {
         return false; 
     } 
   
-    // Remove the K no. of digits to 
-    // complete game 
+    //usuń K elementów
     public void removeKDigits() 
     { 
         int count = K; 
@@ -171,7 +170,7 @@ public class SudokuSolver {
             int cellId = randomGenerator(N*N)-1; 
   
             // System.out.println(cellId); 
-            // extract coordinates i  and j 
+            // wyodrębnij współrzędne i i j
             int i = (cellId/N); 
             int j = cellId%N; 
             if (j != 0) 
@@ -186,7 +185,7 @@ public class SudokuSolver {
         } 
     } 
   
-    // Print sudoku 
+    // Drukuj sudoku
     public void printSudoku() 
     { 
         for (int i = 0; i<N; i++) 
