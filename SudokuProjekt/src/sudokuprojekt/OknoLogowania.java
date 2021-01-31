@@ -17,9 +17,11 @@ import javax.swing.JOptionPane;
  * @author user
  */
 public class OknoLogowania extends javax.swing.JFrame {
-    private static final String USERNAME ="root";
-        private static final String PASSWORD ="";
-        private static final String CONN_STRING ="jdbc:mysql://localhost/sudoku";
+        public static final String USERNAME ="root";
+        public static final String PASSWORD ="";
+        public static final String CONN_STRING ="jdbc:mysql://localhost/sudoku";
+        public static String sQLLogin;
+        public static int sQLId_user;
         Connection polaczenie = null;
     /**
      * Creates new form OknoLogowania
@@ -269,11 +271,13 @@ public class OknoLogowania extends javax.swing.JFrame {
        String Haslo =String.valueOf(jPasswordField1.getPassword());
        try{
             Statement zapytanie = (Statement)polaczenie.createStatement();
-            ResultSet result = zapytanie.executeQuery("SELECT Login FROM user WHERE Login='"+Login+"' AND Haslo='"+Haslo+"'");
+            ResultSet result = zapytanie.executeQuery("SELECT Login, Id_user FROM user WHERE Login='"+Login+"' AND Haslo='"+Haslo+"'");
             while(result.next()) 
             {
             System.out.println("Zalogowany "+result.toString()); 
             System.out.println("Zalogowany "+result.getString("Login"));
+            sQLLogin = result.getString("Login");
+            sQLId_user = result.getInt("Id_user");
             zalogowany = true;
             }
         }catch(SQLException e){

@@ -12,7 +12,6 @@ import java.awt.Color;
  * @author user
  */
 public class SudokuProjekt {
-
         public static boolean latwy=false;
         public static boolean sredni=false;
         public static boolean trudny=false;

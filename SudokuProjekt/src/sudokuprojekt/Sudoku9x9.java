@@ -6,6 +6,7 @@
 package sudokuprojekt;
 
 import java.awt.Color;
+import static java.awt.image.ImageObserver.HEIGHT;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -14,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTextField;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,12 +29,19 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private int seconds;
     private boolean state=false;
     private boolean flag=false;
+    Connection polaczenie = null;
 
     /**
      * Creates new form SystemDziesietnyLatwy
      */
     public Sudoku9x9() {
         initComponents();
+        try{
+            polaczenie = DriverManager.getConnection(OknoLogowania.CONN_STRING,OknoLogowania.USERNAME,OknoLogowania.PASSWORD);
+            System.out.println("Polaczyles sie z baza");
+        }catch(SQLException e){
+            System.out.println("Cos poszlo nie tak "+ e);
+        }
     }
 
     /**
@@ -144,6 +154,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(850, 650));
@@ -934,6 +945,15 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Edit");
+
+        jMenuItem3.setText("Tablica Rekordów");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -1033,6 +1053,19 @@ public class Sudoku9x9 extends javax.swing.JFrame {
               sprawdzBinarny();
           }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        SudokuProjekt.latwy=false;
+        SudokuProjekt.sredni=false;
+        SudokuProjekt.trudny=false;
+        SudokuProjekt.latwybinarny=false;
+        SudokuProjekt.srednibinarny=false;
+        SudokuProjekt.trudnybinarny=false;
+        Wyniki frame2=new Wyniki();
+        frame2.setVisible(true);
+        frame2.getContentPane().setBackground(new Color(219, 215, 217));
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
     
    private void sprawdzBinarny(){
     jLabel1.setText("");
@@ -1095,6 +1128,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
          sprawdzBox=sprawdzBoxy(tab);
          if(sprawdzBox==true && sprawdzkolumny==true && sprawdzwiersze==true)
           {
+              wyslijWynikDoBazy();
               state=false;
               flag=false;
               jLabel1.setText("Brawo! SUDOKU ROZWIĄZANE!!!");
@@ -1107,6 +1141,66 @@ public class Sudoku9x9 extends javax.swing.JFrame {
         }
     }
 
+   private void wyslijWynikDoBazy(){
+       
+       String godziny="",minuty="",sekundy="";
+       String Czas = "";
+       if(hours<10){
+           Czas += "0"+hours;
+           godziny = "0"+hours;
+       }else{
+           Czas += hours;
+           godziny += hours;
+       }
+       if(minutes<10){
+           Czas += "0"+minutes;
+           minuty = "0"+minutes;
+       }else{
+           Czas += minutes;
+           minuty += minutes;
+       }
+       if(seconds<10){
+           Czas += "0"+seconds;
+           sekundy="0"+seconds;
+       }else{
+           Czas += seconds;
+           sekundy+=seconds;
+       }
+       
+       int CzasInt = Integer.parseInt(Czas);
+       String Poziom_trudnosci = "";
+       String Rodzaj_planszy = "";
+       
+       if(SudokuProjekt.latwy){
+            Poziom_trudnosci = "łatwy";
+            Rodzaj_planszy = "dziesiętny";
+       }else if(SudokuProjekt.sredni){
+            Poziom_trudnosci = "średni";
+            Rodzaj_planszy = "dziesiętny";
+       }else if(SudokuProjekt.trudny){
+            Poziom_trudnosci = "trudny";
+            Rodzaj_planszy = "dziesiętny";
+       }else if(SudokuProjekt.latwybinarny){
+            Poziom_trudnosci = "łatwy";
+            Rodzaj_planszy = "binarny";  
+       }else if(SudokuProjekt.srednibinarny){
+            Poziom_trudnosci = "średni";
+            Rodzaj_planszy = "binarny"; 
+       }else if(SudokuProjekt.trudnybinarny){
+            Poziom_trudnosci = "trudny";
+            Rodzaj_planszy = "binarny";
+       }
+       
+            try{
+                Statement zapytanie = (Statement)polaczenie.createStatement();
+                String insert = "INSERT INTO wynik ( `Id_user`, `Poziom_trudnosci`, `Rodzaj_planszy`, `Czas`) VALUES ('"+OknoLogowania.sQLId_user+"', '"+Poziom_trudnosci+"', '"+Rodzaj_planszy+"', '"+Czas+"');";
+                zapytanie.executeUpdate(insert);
+                System.out.println("Dodano do bazy "+Poziom_trudnosci+" "+Rodzaj_planszy+" "+Czas);
+                JOptionPane.showMessageDialog(null, " Przeszedłeś sudoku na poziomie "+Poziom_trudnosci+" w systemie "+Rodzaj_planszy+" z czasem równym: "+godziny+":"+minuty+":"+sekundy+" !", "Gratulacje !", HEIGHT);
+            }catch(SQLException e){
+                System.out.println("Cos poszlo nie tak "+ e);
+            }
+   }
    private void reset(){
    seconds=0;
         minutes=0;
@@ -1166,6 +1260,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
          sprawdzBox=sprawdzBoxy(tab);
          if(sprawdzBox==true && sprawdzkolumny==true && sprawdzwiersze==true)
           {
+              wyslijWynikDoBazy();
               state=false;
               flag=false;
               jLabel1.setText("Brawo! SUDOKU ROZWIĄZANE!!!");
@@ -1539,6 +1634,7 @@ public class Sudoku9x9 extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
