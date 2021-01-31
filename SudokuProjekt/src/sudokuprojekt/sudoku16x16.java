@@ -8,6 +8,12 @@ package sudokuprojekt;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTextField;
 
 /**
@@ -16,9 +22,12 @@ import javax.swing.JTextField;
  */
 public class sudoku16x16 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form sudoku16x16
-     */
+    private ArrayList<JTextField> al = new ArrayList<JTextField>();
+    private int hours;
+    private int minutes;
+    private int seconds;
+    private boolean state=false;
+    private boolean flag=false;
     public sudoku16x16() {
         initComponents();
     }
@@ -305,6 +314,11 @@ public class sudoku16x16 extends javax.swing.JFrame {
         cell256 = new javax.swing.JTextField();
         cell239 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        hour = new javax.swing.JLabel();
+        minute = new javax.swing.JLabel();
+        second = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -312,7 +326,7 @@ public class sudoku16x16 extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(900, 750));
+        setPreferredSize(new java.awt.Dimension(950, 750));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -2002,7 +2016,30 @@ public class sudoku16x16 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(760, 90, 110, 23);
+        jButton1.setBounds(740, 130, 110, 23);
+
+        jButton2.setText("Sprawdź");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(740, 170, 110, 23);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(700, 220, 250, 40);
+
+        hour.setText("00  :");
+        getContentPane().add(hour);
+        hour.setBounds(752, 80, 30, 14);
+
+        minute.setText("00  :");
+        getContentPane().add(minute);
+        minute.setBounds(790, 80, 30, 14);
+
+        second.setText("00");
+        getContentPane().add(second);
+        second.setBounds(830, 80, 30, 14);
 
         jMenu1.setText("File");
 
@@ -2059,8 +2096,43 @@ public class sudoku16x16 extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        reset();
+        state=true;
+        if(!flag){
+        Thread t=new Thread(){
+            public void run(){
+            for(;;){
+            if(state==true){
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                    if(seconds>60){
+                    seconds=0;
+                    minutes++;
+                    }
+                    if(minutes>60){
+                    seconds=0;
+                    minutes=0;
+                    hours++;
+                    }
+                    second.setText(" : "+seconds);
+                    seconds++;
+                    minute.setText(" : "+minutes);
+                    hour.setText(""+hours);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Sudoku9x9.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            
+            }
+            else break;
+            }
+            }
+            };
+        t.start();
+        flag=true;
+        }
+        jLabel1.setText("");
         if(SudokuProjekt.latwy==true){
-        sudokuGenerator(16,40);
+        sudokuGenerator(16,5);
         }
         if(SudokuProjekt.sredni==true){
        sudokuGenerator(16,60);
@@ -2070,9 +2142,139 @@ public class sudoku16x16 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       jLabel1.setText("");
+       boolean czyDalej=true;
+       boolean sprawdzwiersze=false;
+       boolean sprawdzkolumny=false;
+       boolean sprawdzBox=false;
+        ArrayList<Integer> alcheck = new ArrayList<Integer>();
+        if(al.isEmpty()){
+        jLabel1.setText("Wygeneruj planszę!");
+        jLabel1.setForeground(Color.red);
+        czyDalej=false;
+        }
+        if(czyDalej==true){
+        for (int i=0; i<al.size(); i++)
+       {
+          if("".equals(al.get(i).getText())){
+              jLabel1.setText("Uzupełnij wszystkie pola");
+              jLabel1.setForeground(Color.red);
+          czyDalej=false;    
+          break;
+          }}}
+        if(czyDalej==true){
+        for (int i=0; i<al.size(); i++)
+        {
+            if (al.get(i).getText().matches("[0-9A-F]+") && al.get(i).getText().length() < 2){
+                continue;
+            }else{
+              jLabel1.setText("Uzupełnij pola wartościami od 0 do F!");
+              jLabel1.setForeground(Color.red);
+              czyDalej=false;
+              break;        }
+        }}
+        if(czyDalej==true){
+            for(int i=0; i<al.size();i++){
+            alcheck.add(Integer.parseInt(al.get(i).getText(),16));            
+        }
+            int wiersze=0;
+            int kolumny=0;
+            int tab[][]=new int[16][16];
+          for (int i = 0;i< alcheck.size(); i++){
+              if(i%16==0 && i!=0){
+              wiersze++;
+              kolumny=0;
+              }
+          tab[wiersze][kolumny]=alcheck.get(i);
+          kolumny++;
+          }  
+          sprawdzwiersze=sprawdzWiersze(tab);
+         sprawdzkolumny=sprawdzKolumny(tab);
+         sprawdzBox=sprawdzBoxy(tab);
+         if(sprawdzwiersze==true && sprawdzkolumny==true && sprawdzBox==true)
+          {
+              state=false;
+              flag=false;
+              jLabel1.setText("Brawo! SUDOKU ROZWIĄZANE!!!");
+              jLabel1.setForeground(Color.GREEN.darker().darker());
+          }
+          else{
+              jLabel1.setText("SUDOKU ŹLE ROZWIĄZANE!");
+              jLabel1.setForeground(Color.red);
+          }      
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+    private void reset(){
+   seconds=0;
+        minutes=0;
+        hours=0;
+        second.setText(" : "+seconds);
+        minute.setText(" : "+minutes);
+        hour.setText(""+hours);}
+    private boolean sprawdzBoxy(int [][] tab){
+        return (boxDuplikaty(0,4,0,4,tab) && boxDuplikaty(0,4,4,8,tab) && boxDuplikaty(0,4,8,12,tab) && boxDuplikaty(0,4,12,16,tab)&&
+                boxDuplikaty(4,8,0,4,tab) && boxDuplikaty(4,8,4,8,tab) && boxDuplikaty(4,8,8,12,tab) && boxDuplikaty(4,8,12,16,tab)&&
+                boxDuplikaty(8,12,0,4,tab) && boxDuplikaty(8,12,4,8,tab)&& boxDuplikaty(8,12,8,12,tab)&& boxDuplikaty(8,12,12,16,tab) && 
+                boxDuplikaty(12,16,0,4,tab) && boxDuplikaty(12,16,4,8,tab) && boxDuplikaty(12,16,8,12,tab) && boxDuplikaty(12,16,12,16,tab)   );
+
+    }
+    private boolean boxDuplikaty(int rowStart, int rowFinish, int colStart, int colFinish, int [][]tab){
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = rowStart; i < rowFinish  ; i++) {
+            for (int j =colStart ; j < colFinish; j++) {
+                set.add(tab[i][j]);
+            }                        
+        }
+        if(set.size() != 16) return false;
+        return true;
+    }
+    private boolean sprawdzKolumny(int[][] tab){
+    boolean sprawdz=false; 
+    int counter=0;
+    Integer tabkolumny[]=new Integer[16]; 
+    for(int il=0; il<16; il++){
+    for(int i=0; i<16; i++){
+    tabkolumny[i]=tab[i][counter];
+    }
+    counter++;
+    if(areDistinct(tabkolumny)){
+        sprawdz= true;
+    }
+    else {
+    sprawdz= false;
+    break;
+    }
+    }    
+        return sprawdz;
+    }
+    private boolean sprawdzWiersze(int[][] tab){
+        boolean sprawdz=false;    
+        Integer tabwiersze[]=new Integer[16];   
+        for(int i=0; i<16; i++){
+        for(int j=0; j<16; j++){
+        tabwiersze[j]=tab[i][j];
+        }
+        if(areDistinct(tabwiersze)){
+            sprawdz= true;
+        }
+        else {
+        sprawdz= false;
+        break;
+        }
+        }
+            return sprawdz;
+        }
+    public static boolean areDistinct(Integer arr[]) 
+    { 
+       
+        Set<Integer> s =  
+           new HashSet<Integer>(Arrays.asList(arr)); 
+   
+        return (s.size() == arr.length); 
+    } 
     private void sudokuGenerator(int N, int K){
-        Font font1 = new Font("Tahoma", Font.PLAIN, 20);
-        ArrayList<JTextField> al = new ArrayList<JTextField>();
+        Font font1 = new Font("Tahoma", Font.PLAIN, 20);        
         ArrayList<Integer> almatrix = new ArrayList<Integer>();
         al=addToArrayList();
         //czyszczenie sudoku w razie gdyby ktoś chciał wygenerować jeszcze raz
@@ -2693,7 +2895,10 @@ return al;
     private javax.swing.JTextField cell97;
     private javax.swing.JTextField cell98;
     private javax.swing.JTextField cell99;
+    private javax.swing.JLabel hour;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -2715,5 +2920,7 @@ return al;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel minute;
+    private javax.swing.JLabel second;
     // End of variables declaration//GEN-END:variables
 }

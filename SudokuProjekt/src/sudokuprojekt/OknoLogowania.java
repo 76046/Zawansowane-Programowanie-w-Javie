@@ -8,6 +8,8 @@ package sudokuprojekt;
 import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.plaf.basic.BasicTabbedPaneUI;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
     
 /**
@@ -15,12 +17,22 @@ import javax.swing.plaf.basic.BasicTabbedPaneUI;
  * @author user
  */
 public class OknoLogowania extends javax.swing.JFrame {
-    
+    private static final String USERNAME ="root";
+        private static final String PASSWORD ="";
+        private static final String CONN_STRING ="jdbc:mysql://localhost/sudoku";
+        Connection polaczenie = null;
     /**
      * Creates new form OknoLogowania
      */
     public OknoLogowania() {
         initComponents();
+        
+     try{
+            polaczenie = DriverManager.getConnection(CONN_STRING,USERNAME,PASSWORD);
+            System.out.println("Polaczyles sie z baza");
+        }catch(SQLException e){
+            System.out.println("Cos poszlo nie tak "+ e);  
+        }
         
     }
       
@@ -152,6 +164,11 @@ public class OknoLogowania extends javax.swing.JFrame {
         });
 
         jButton3.setText("OK");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Felix Titling", 1, 18)); // NOI18N
         jLabel10.setText("Rejestracja");
@@ -247,10 +264,31 @@ public class OknoLogowania extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed_ZalogujSie(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed_ZalogujSie
        //zalogowany
-       WyborPoziomu frame2=new WyborPoziomu();
-       frame2.setVisible(true);
-       frame2.getContentPane().setBackground(new Color(219, 215, 217));
-       this.setVisible(false);
+       boolean zalogowany = false;
+       String Login =jTextField1.getText();
+       String Haslo =String.valueOf(jPasswordField1.getPassword());
+       try{
+            Statement zapytanie = (Statement)polaczenie.createStatement();
+            ResultSet result = zapytanie.executeQuery("SELECT Login FROM user WHERE Login='"+Login+"' AND Haslo='"+Haslo+"'");
+            while(result.next()) 
+            {
+            System.out.println("Zalogowany "+result.toString()); 
+            System.out.println("Zalogowany "+result.getString("Login"));
+            zalogowany = true;
+            }
+        }catch(SQLException e){
+                System.out.println("Cos poszlo nie tak "+ e);
+        }
+       
+       if(zalogowany){
+            JOptionPane.showMessageDialog(null ,"Zalogowałeś się !" , Login, HEIGHT);
+            WyborPoziomu frame2=new WyborPoziomu();
+            frame2.setVisible(true);
+            frame2.getContentPane().setBackground(new Color(219, 215, 217));
+            this.setVisible(false); 
+       }else{
+            JOptionPane.showMessageDialog(null ,"Nie zalogowałeś się !" , "Problem !", HEIGHT);
+       }
     }//GEN-LAST:event_jButton1ActionPerformed_ZalogujSie
 
     private void jButton2ActionPerformed_ZarejestrujSie(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed_ZarejestrujSie
@@ -264,6 +302,48 @@ public class OknoLogowania extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+         int blad = 0;
+            String Login =jTextField2.getText();
+            String Haslo =String.valueOf(jPasswordField2.getPassword());
+            String Imie =jTextField4.getText();
+            String Nazwisko =jTextField5.getText();
+            String Email =jTextField6.getText();
+        try{
+            Statement zapytanie = (Statement)polaczenie.createStatement();
+            ResultSet result = zapytanie.executeQuery("SELECT Login, Email From user");
+            while(result.next()) 
+            {
+            String LoginSpr = result.getString("Login");
+            System.out.println(Login+" "+LoginSpr+" "+Login.equals(LoginSpr));
+                if(Login.equals(LoginSpr))
+                    blad = 1;
+            String EmailSpr = result.getString("Email");
+            System.out.println(Email+" "+EmailSpr+" "+Email.equals(EmailSpr));
+                if(Email.equals(EmailSpr))
+                    blad = 2;
+            }
+        }catch(SQLException e){
+                System.out.println("Cos poszlo nie tak "+ e);
+        }
+        
+        if(blad==1){
+            JOptionPane.showMessageDialog(null, "Już istnieje taki login !", "Rejestracja", HEIGHT);
+        }else if(blad==2){
+            JOptionPane.showMessageDialog(null, "Już istnieje taki email !", "Rejestracja", HEIGHT);
+        }else{
+            try{
+                Statement zapytanie = (Statement)polaczenie.createStatement();
+                String insert = "INSERT INTO user ( `Login`, `Haslo`, `Imie`, `Nazwisko`, `Email`) VALUES ('"+Login+"', '"+Haslo+"', '"+Imie+"', '"+Nazwisko+"', '"+Email+"');";
+                zapytanie.executeUpdate(insert);
+                System.out.println("Dodano do bazy "+Login+" "+Haslo+" "+Imie+" "+Nazwisko+" "+Email);
+                JOptionPane.showMessageDialog(null, " Zostałeś zarejestrowany !", Imie, HEIGHT);
+            }catch(SQLException e){
+                System.out.println("Cos poszlo nie tak "+ e);
+            }
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
