@@ -6,20 +6,84 @@
 package sudokuprojekt;
 
 import java.awt.Color;
+import java.sql.*;
+
 
 /**
  *
  * @author user
  */
 public class Wyniki extends javax.swing.JFrame {
-
+    Connection polaczenie = null;   
     /**
      * Creates new form Wyniki
      */
     public Wyniki() {
         initComponents();
+        
+        try{
+            polaczenie = DriverManager.getConnection(OknoLogowania.CONN_STRING,OknoLogowania.USERNAME,OknoLogowania.PASSWORD);
+            System.out.println("Polaczyles sie z baza");
+        }catch(SQLException e){
+            System.out.println("Cos poszlo nie tak "+ e);
+        }
+        try{
+           Statement zapytanie = (Statement)polaczenie.createStatement();
+           
+           String czas;
+           String[] Poziom_trudnosci = {"łatwy","średni","trudny"};
+           String[] Rodzaj_planszy = {"binarny","dziesiętny","heksadecymalny"};
+           for(int i = 0; i < Poziom_trudnosci.length;i++){
+               for(int j = 0;j<Rodzaj_planszy.length;j++){
+                    ResultSet result = zapytanie.executeQuery("SELECT Czas FROM wynik WHERE Id_user='"+OknoLogowania.sQLId_user+"' AND Poziom_trudnosci='"+Poziom_trudnosci[i]+"' AND Rodzaj_planszy = '"+Rodzaj_planszy[j]+"' ORDER BY Czas ASC ");
+                    while(result.next()) 
+                    {
+                        
+                        czas = obliczCzas(result.getInt("Czas"));
+                        if(i==0 && j==0)
+                            lb.setText(czas);
+                        if(i==0 && j==1)
+                            ld.setText(czas);
+                        if(i==0 && j==2)
+                            lh.setText(czas);
+                        if(i==1 && j==0)
+                            sb.setText(czas);
+                        if(i==1 && j==1)
+                            sd.setText(czas);
+                        if(i==1 && j==2)
+                            sh.setText(czas);
+                        if(i==2 && j==0)
+                            tb.setText(czas);
+                        if(i==2 && j==1)
+                            td.setText(czas);
+                        if(i==2 && j==2)
+                            th.setText(czas);
+                        break;
+                    }
+               }
+           }    
+        }catch(SQLException e){
+                System.out.println("Cos poszlo nie tak "+ e);
+        }
+        
+        
     }
 
+    private String obliczCzas(int czas){
+        System.out.println(czas+"dupa");
+        String out_czas = "";
+        String czas_przerobiony = String.format("%06d", czas);
+        System.out.println(czas_przerobiony);
+        char[] czas_ciag = czas_przerobiony.toCharArray();
+        for(int i = 0;i < czas_ciag.length; i+=2){
+            out_czas += ""+czas_ciag[i]+""+czas_ciag[i+1];
+                    if(i!=4){
+                        out_czas +=":";
+                    }           
+        }
+        System.out.println(out_czas); 
+        return out_czas;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -2275,13 +2275,13 @@ public class sudoku16x16 extends javax.swing.JFrame {
        
        if(SudokuProjekt.latwy){
             Poziom_trudnosci = "łatwy";
-            Rodzaj_planszy = "dziesiętny";
+            Rodzaj_planszy = "heksadecymalny";
        }else if(SudokuProjekt.sredni){
             Poziom_trudnosci = "średni";
-            Rodzaj_planszy = "dziesiętny";
+            Rodzaj_planszy = "heksadecymalny";
        }else if(SudokuProjekt.trudny){
             Poziom_trudnosci = "trudny";
-            Rodzaj_planszy = "dziesiętny";
+            Rodzaj_planszy = "heksadecymalny";
        }
        
        try{
