@@ -70,7 +70,6 @@ public class Wyniki extends javax.swing.JFrame {
     }
 
     private String obliczCzas(int czas){
-        System.out.println(czas+"dupa");
         String out_czas = "";
         String czas_przerobiony = String.format("%06d", czas);
         System.out.println(czas_przerobiony);
@@ -144,7 +143,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(90, 10, 120, 14);
 
-        sd.setText("-");
+        sd.setText("Nie rozegrane");
         jPanel1.add(sd);
         sd.setBounds(360, 10, 90, 14);
 
@@ -160,7 +159,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(90, 10, 120, 14);
 
-        td.setText("-");
+        td.setText("Nie rozegrane");
         jPanel2.add(td);
         td.setBounds(360, 10, 90, 14);
 
@@ -176,7 +175,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel3.add(jLabel5);
         jLabel5.setBounds(90, 10, 120, 14);
 
-        ld.setText("-");
+        ld.setText("Nie rozegrane");
         jPanel3.add(ld);
         ld.setBounds(360, 10, 90, 14);
 
@@ -192,7 +191,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel4.add(jLabel6);
         jLabel6.setBounds(90, 10, 170, 14);
 
-        lh.setText("-");
+        lh.setText("Nie rozegrane");
         jPanel4.add(lh);
         lh.setBounds(360, 10, 90, 14);
 
@@ -208,7 +207,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel5.add(jLabel2);
         jLabel2.setBounds(90, 10, 120, 14);
 
-        lb.setText("-");
+        lb.setText("Nie rozegrane");
         jPanel5.add(lb);
         lb.setBounds(360, 10, 90, 14);
 
@@ -224,7 +223,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel6.add(jLabel7);
         jLabel7.setBounds(90, 10, 170, 14);
 
-        sh.setText("-");
+        sh.setText("Nie rozegrane");
         jPanel6.add(sh);
         sh.setBounds(360, 10, 90, 14);
 
@@ -240,7 +239,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel7.add(jLabel8);
         jLabel8.setBounds(90, 10, 120, 14);
 
-        sb.setText("-");
+        sb.setText("Nie rozegrane");
         jPanel7.add(sb);
         sb.setBounds(360, 10, 90, 14);
 
@@ -256,7 +255,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel8.add(jLabel9);
         jLabel9.setBounds(90, 10, 170, 14);
 
-        th.setText("-");
+        th.setText("Nie rozegrane");
         jPanel8.add(th);
         th.setBounds(360, 10, 90, 14);
 
@@ -272,7 +271,7 @@ public class Wyniki extends javax.swing.JFrame {
         jPanel9.add(jLabel10);
         jLabel10.setBounds(90, 10, 120, 14);
 
-        tb.setText("-");
+        tb.setText("Nie rozegrane");
         jPanel9.add(tb);
         tb.setBounds(360, 10, 90, 14);
 
